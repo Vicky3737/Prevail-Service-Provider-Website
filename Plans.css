@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+nav{
+  background-color: #071952;
+  padding: 1.75rem 5%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all .50s ease;
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 30px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #c6dafb;
+  transition: transform 0.3s;
+  font-size: 20px;
+}
+.WebOpen{
+  color: #37B7C3; 
+}
+nav a:hover{
+  transform: scale(1.05);
+}
+nav .logo a{
+  font-size: 35px;
+  color: #c6dafb;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+nav .logo a:hover{
+  transform: none;
+}
+#login a{
+  text-decoration: underline;
+}
+#signup a{
+  text-decoration: underline;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #f8f8f8;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+  font-weight: 500;
+}
+.sidebar .WebOpen a{
+  color: #071952;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.sidebar a:active{
+  transform: scale(1.05);
+}
+.menu-button{
+  display: none;
+}
+
+@media (max-width: 1280px){
+  .hideOnMobile{
+      display: none;
+  }
+  .menu-button{
+      display: block;
+  }
+  .sidebar li{
+      height: 60px;
+  }
+  .sidebar li a{
+      color: black;
+      font-size: 20px;
+  }
+}
+/* .main-container styles */
+
+.main-container {
+  padding: 3.1rem 10%;
+  text-align: center;
+  width: 100%;
+  height: 80%;
+  background-color: #071952;
+  padding-bottom: 0;
+}
+
+.content-tittle{
+  padding: 0rem 4rem 4rem 4rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-tittle .light{
+  color: #37B7C3;
+  font-weight: bold;
+}
+.content-tittle h2 {
+  text-align: center;
+  color: #37B7C3;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content-tittle p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Responsive styles */
+
+@media (max-width: 1280px) {
+  .main-container {
+    padding: 2rem 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 1.5rem 3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 0.5rem 1%;
+  }
+  .content-tittle h2{
+    font-size: 2rem;
+    padding: 0;
+  }
+  .content-tittle{
+    padding: 20px;
+  }
+}
+
+/* plans */ 
+.planes-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .planes{
+    background-color: #f8f8f8;
+  }
+  
+  .card {
+    flex-basis: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #071952;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    
+  }
+  
+  .card .title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #37B7C3;
+  }
+  .planes-card{
+    padding: 50px;
+  }
+  .card .price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .card .description {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .card .buy-plan {
+    background-color: #04123d;
+    color: #fff;
+    padding: 10px 70px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: auto;
+  }
+  
+  
+  .card .buy-plan:hover {
+    background-color: #ffff;
+    color: #04123d; /* change the background color on hover */
+    transform: scale(1.05); /* add a slight scale effect on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a subtle box shadow on hover */
+    transition: 0.3s; /* smooth out the transition */
+  }
+  
+  .Key-fectures{
+    font-size: 1.3rem;
+    font-weight: bold;
+    
+  }
+  .description p{
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex-basis: calc(100% - 20px);
+    }
+  }
+  @media (max-width: 1032px) {
+    .card {
+      flex-basis: calc(100% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      flex-basis: 100%;
+    }
+    .card .title{
+      font-size: 30px;
+    }
+    .planes-card{
+      padding: 20px;
+    }
+  } 
+  .packages {
+    padding: 1rem;
+    text-align: center;
+    padding-bottom: 0;
+  }
+  
+  .container-packages {
+    margin: 0rem;
+  }
+  
+  .packages h2 {
+    font-size: 2.70rem;
+    margin-bottom: 0.62rem;
+    color: #032490;
+  }
+  
+  .packages p {
+    font-size: 1.30rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #032490;
+  }
+
+/* footer */
+
+  .footer {
+    width: 100%;
+    background: #071952;
+    font-family: "Poppins", sans-serif;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+    padding: 60px;
+  }
+  .footer-row .footer-col h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .footer-col .links {
+    margin-top: 20px;
+  }
+  .footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  .footer-col .links li a {
+    text-decoration: none;
+    color: #bfbfbf;
+  }
+  .footer-col .links li a:hover {
+    color: #fff;
+  }
+  .footer-col p {
+    margin: 20px 0;
+    color: #bfbfbf;
+    max-width: 300px;
+  }
+  .footer-col form {
+    display: flex;
+    gap: 5px;
+  }
+  .footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6 ;
+    caret-color: #fff;
+    color: #fff;
+    padding-left: 10px;
+  }
+  .footer-col input::placeholder {
+    color: #ccc;
+  }
+   .footer-col form button {
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+  }
+  .footer-col form button:hover {
+    background: #cecccc;
+  }
+  .footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+  }
+  .footer-col .icons i {
+    color: #afb6c7;
+  }
+  .footer-col .icons i:hover  {
+    color: #fff;
+  }
+  @media (max-width: 768px) {
+    .footer {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      transform: none;
+      width: 100%;
+      border-radius: 0;
+    }
+    .footer .footer-row {
+      padding: 20px;
+      gap: 1rem;
+    }
+    .footer-col form {
+      display: block;
+    }
+    .footer-col form :where(input, button) {
+      width: 100%;
+    }
+    .footer-col form button {
+      margin: 10px 0 0 0;
+    }
+  }
+  @media (max-width: 450px){
+    .footer{
+      padding-left: 0;
+    }
+  }

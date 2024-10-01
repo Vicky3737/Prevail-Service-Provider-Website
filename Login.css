@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+
+/* Navigation */
+nav{
+  background-color: #071952;
+  padding: 1.75rem 5%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all .50s ease;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.09);
+}
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li{
+  height: 30px;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #c6dafb;
+  transition: transform 0.3s;
+  font-size: 20px;
+}
+nav a:hover{
+  transform: scale(1.05);
+}
+nav .logo a{
+  font-size: 35px;
+  color: #c6dafb;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+}
+nav li:first-child{
+  margin-right: auto;
+}
+nav .logo a:hover{
+  transform: none;
+}
+#login a{
+  text-decoration: underline;
+}
+#signup a{
+  text-decoration: underline;
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: #f8f8f8;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+  font-weight: 500;
+}
+.sidebar .no-hover{
+transition: none;
+}
+.sidebar .active{
+text-decoration: underline;
+font-weight: bold;
+}
+.menu-button{
+  display: none;
+}
+.sidebar .on-login{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media (max-width: 1280px){
+  .hideOnMobile{
+      display: none;
+  }
+  .menu-button{
+      display: block;
+  }
+  .sidebar li{
+      height: 60px;
+  }
+  .sidebar li a{
+      color: black;
+      font-size: 20px;
+  }
+}
+
+/* form */
+body {
+  font-family: 'poppins',sans-serif;
+  background-color: #071952;
+}
+
+.signup {
+  background-color: #f7f7f7;
+  padding: 20px;
+  background-color: #071952;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-side {
+  width: 40%;
+  padding: 20px;
+  background-color: #071952;
+  border: none;
+  border-radius: 10px;
+}
+
+.left-side h1{
+  color: white;
+  font-family: 'poppins',sans-serif;
+  margin-bottom: 10px;
+}
+.left-side p{
+  color: rgb(235, 230, 230);
+  font-family: 'poppins',sans-serif;
+}
+
+
+.right-side {
+  width: 60%;
+  padding: 20px;
+}
+
+.form {
+  padding: 20px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.message {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit {
+  background-color: #071952;
+  color: #fff;
+  width: 100%;
+  height: 41.6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.submit:hover {
+  background-color: #102773;
+}
+
+.signin {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.signin a {
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+.signin a:hover {
+  color: #3e8e41;
+}
+.Options{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+.google {
+  display: flex;
+  align-items: center;
+  background-color: #e6e3e3;
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.glogo {
+  margin-right: 10px;
+}
+
+.gtext {
+  margin: 0;
+  font-size: 16px;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Make the button responsive */
+.google {
+  width: 100%;
+  margin: 20px auto;
+}
+
+/* Add media queries to make the button responsive on different screen sizes */
+@media only screen and (max-width: 768px) {
+  .google {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .google {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+/* Add this to make the image responsive */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+
+/* Add these media queries to make the layout responsive */
+@media only screen and (max-width: 768px) {
+  .box {
+    flex-direction: column;
+  }
+  .left-side {
+    width: 100%;
+    padding: 20px;
+    border-right: none;
+  }
+  .right-side {
+    width: 100%;
+    padding: 20px;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .submit {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  .box {
+    padding: 10px;
+  }
+  .left-side {
+    padding: 10px;
+  }
+  .right-side {
+    padding: 10px;
+  }
+  .input {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .submit {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .left-side {
+    display: none;
+  }
+}
+
+
+/* footer */
+
+.footer {
+  width: 100%;
+  background: #071952;
+  font-family: "Poppins", sans-serif;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.09);
+}
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.footer-col .links {
+  margin-top: 20px;
+}
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+.footer-col .links li a:hover {
+  color: #fff;
+}
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+.footer-col input::placeholder {
+  color: #ccc;
+}
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.footer-col form button:hover {
+  background: #cecccc;
+}
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+.footer-col .icons i {
+  color: #afb6c7;
+}
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+  .footer-col form {
+    display: block;
+  }
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+@media (max-width: 450px){
+  .footer{
+    padding-left: 0;
+  }
+}
